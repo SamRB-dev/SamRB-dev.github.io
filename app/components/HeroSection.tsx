@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
+
 function HeroSection() {
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-[4%]">
         {/* <Image
           src="https://placehold.co/600x400"
           alt="Main Image"
@@ -17,8 +19,31 @@ function HeroSection() {
           alt=""
         />
       </div>
-      <div className="text">
-        <h1>Hey</h1>
+      <div className="flex-col justify-center text-white">
+        <h1 className="text-center mb-[2%] text-4xl">Hey</h1>
+        <h1 className="text-center font-bold text-6xl mb-[1.2%]">
+          I'm Sadim Rahman
+        </h1>
+        <h1 className="text-center font-bold text-5xl">
+          I'm a    
+          <span>
+            <TypeAnimation
+              className="text-center font-bold text-5xl text-[#D32D20]"
+              preRenderFirstString={true}
+              sequence={[
+                " Electronic Engineering Student",
+                2000,
+                " Junior Developer",
+                2000,
+                " Machine Learning Enthusiast",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
+          </span>
+        </h1>
       </div>
     </>
   );
