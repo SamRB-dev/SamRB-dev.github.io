@@ -59,7 +59,7 @@ function HeroSection() {
         </h3>
         <div id="url" className="flex justify-center">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/srb008/" target="_blank" 
             className="px-8 py-3 rounded-full text-[22px] font-medium bg-[#24272C] shadow-[4px_4px_2px_0px_rgba(0,0,0,0.5),-4px_-4px_2px_0px_rgba(255,255,255,0.5)]"
           >
             Contact me
