@@ -33,6 +33,31 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23050810'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-size='16' font-weight='bold' fill='%2300ff88'>S</text></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ── Person Schema (SEO) ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sadim Rahman Badhan",
+    "alternateName": "SamRB-dev",
+    "url": "https://samrb-dev.github.io",
+    "email": "sadimrahmanbadhon@gmail.com",
+    "jobTitle": "Electronic Engineering Student",
+    "description": "Electronic Engineering student at Hochschule Hamm-Lippstadt, Germany. Specialising in embedded systems, FPGA design, robotics, and cybersecurity.",
+    "knowsAbout": ["Embedded Systems","FPGA","VHDL","Robotics","Autonomous Systems","Cybersecurity","Machine Learning","C++","Python"],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Hochschule Hamm-Lippstadt" },
+    "sameAs": [
+      "https://github.com/SamRB-dev",
+      "https://linkedin.com/in/srb008",
+      "https://youtube.com/@samisnoviceinprogramming",
+      "https://tryhackme.com/p/SamRBdev",
+      "https://www.kaggle.com/sadimrahmanbadhan",
+      "https://profile.hackthebox.com/profile/019e11a2-c221-724e-8b5d-0c0eb00a9fb8"
+    ],
+    "image": "https://samrb-dev.github.io/profile.png"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <style>
@@ -111,7 +136,7 @@
     .hero-available { font-family: var(--mono); font-size: 0.72rem; color: var(--green); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; animation: fadeUp 0.8s ease both; }
     .hero-available::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--green); box-shadow: 0 0 6px var(--green); }
     .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s ease-in-out infinite; flex-shrink: 0; }
-    .hero-tag-name { font-family: var(--disp); font-weight: 900; font-size: clamp(3.5rem, 9vw, 7rem); line-height: 0.95; letter-spacing: -0.02em; background: linear-gradient(135deg, #fff 0%, var(--pink) 45%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: glitch 6s infinite, fadeUp 0.8s 0.1s ease both; }
+    .hero-tag-name { font-family: var(--disp); font-weight: 900; font-size: clamp(2.6rem, 9vw, 7rem); line-height: 0.95; letter-spacing: -0.02em; background: linear-gradient(135deg, #fff 0%, var(--pink) 45%, var(--green) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: glitch 6s infinite, fadeUp 0.8s 0.1s ease both; }
     .hero-realname { font-family: var(--mono); font-size: clamp(0.78rem, 1.5vw, 1rem); color: rgba(224,232,255,0.45); letter-spacing: 0.18em; margin-top: 0.75rem; text-transform: uppercase; animation: fadeUp 0.8s 0.2s ease both; }
     .hero-subtitle { font-family: var(--mono); font-size: clamp(0.68rem, 1.2vw, 0.82rem); color: var(--muted); letter-spacing: 0.1em; margin-top: 0.5rem; animation: fadeUp 0.8s 0.25s ease both; }
     /* hero-subtitle dot separator only */
@@ -397,6 +422,39 @@
     @keyframes pulse     { 0%,100%{box-shadow:0 0 8px var(--green)} 50%{box-shadow:0 0 18px var(--green), 0 0 30px rgba(0,255,136,0.3)} }
     @keyframes floatNode { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
     @keyframes tagIn     { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+    /* ═══════ MOBILE OPTIMISATION ════════════════════════ */
+    html { overflow-x: hidden; }
+
+    @media (max-width: 480px) {
+      .hero-desc { font-size: 1rem; }
+      .hero-cta { flex-direction: column; gap: 0.75rem; }
+      .hero-cta .btn { width: 100%; justify-content: center; }
+    }
+
+    @media (max-width: 860px) {
+      .about-photo-frame { max-width: 240px; margin: 0 auto; }
+    }
+
+    @media (max-width: 640px) {
+      .skill-panel { padding: 1.1rem; }
+      .loop-card { padding: 1.25rem; }
+    }
+
+    @media (max-width: 480px) {
+      .edu-item { padding: 1.25rem; }
+      .exp-card { padding: 1.25rem; }
+      .interest-chip { padding: 0.55rem 0.9rem; font-size: 0.72rem; }
+      .fm-card { padding: 1.1rem; }
+      .fm-handle { font-size: 0.68rem; word-break: break-word; overflow-wrap: break-word; }
+      .fm-stat { font-size: 0.6rem; }
+    }
+
+    @media (max-width: 520px) {
+      .c-item { gap: 0.75rem; padding: 0.85rem 1rem; flex-wrap: wrap; }
+      .c-val { font-size: 0.78rem; word-break: break-all; overflow-wrap: break-word; }
+      .c-label { min-width: unset; }
+    }
   </style>
 </head>
 <body>
@@ -469,7 +527,6 @@
         <div class="hero-realname">Sadim Rahman Badhan</div>
         <div class="hero-subtitle">
           <span id="typedText"></span><span class="typed-cursor">|</span>
-          &nbsp;<span style="color:var(--border)">·</span>&nbsp; Hamm, Germany
         </div>
         <p class="hero-desc">I'm genuinely curious about how robots think, how a PCB comes to life, and how attackers break into everything from IoT devices to industrial systems. I like automating boring stuff with scripts, learning new things, starting new projects and occasionally banging my head against the wall when things don't work. Currently studying Electronic Engineering at HSHL and actively looking for my next challenge</p>
         <div class="hero-cta">
@@ -491,7 +548,7 @@
       <div class="about-grid reveal">
         <div>
           <div style="position:relative">
-            <div class="about-photo-frame"><img src="profile.png" alt="Sadim Rahman Badhan" class="about-photo" /></div>
+            <div class="about-photo-frame"><img src="profile.png" alt="Sadim Rahman Badhan" class="about-photo" loading="lazy" decoding="async" /></div>
             <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
           </div>
         </div>
@@ -505,7 +562,7 @@
           journey, but I learn by doing real things rather than just reading 
           about them.</p>
 
-          <p>Outside of engineering, I actively explore <span class="pink">cybersecurity</span> working through TryHackMe and HackTheBox challenges, reverse engineering binaries with <strong>Ghidra</strong> and <strong>pwndbg</strong>, and building toward my <strong>PNPT certification</strong> from scratch.</p>
+          <p>Outside of engineering, I actively explore <span class="pink">cybersecurity</span> working through TryHackMe and HackTheBox challenges, reverse engineering binaries with <strong>Ghidra</strong> and <strong>pwndbg</strong>, and starting my cybersecurity journey with the <strong>eJPT certification</strong> from scratch.</p>
 
           <p>I'm currently looking for a <span class="pink">Werkstudent or Praktikum position</span> in embedded systems, robotics, or autonomous driving somewhere I can bring real engineering value and keep growing fast.</p>
         </div>
@@ -796,7 +853,7 @@
 
       <div class="loop-grid">
 
-        <!-- PNPT -->
+        <!-- eJPT -->
         <div class="loop-card reveal" style="--lc:var(--pink)">
           <svg class="loop-circuit" width="70" height="70" viewBox="0 0 70 70" style="color:var(--pink)">
             <path d="M70 70 L70 30 L45 30 L45 0" fill="none" stroke="currentColor" stroke-width="1"/>
@@ -806,15 +863,16 @@
           </svg>
           <div class="loop-header">
             <span class="loop-spin" style="color:var(--pink)">⟳</span>
-            <div class="loop-title">PNPT Certification Journey</div>
+            <div class="loop-title">Starting cybersecurity journey with eJPT</div>
           </div>
-          <p class="loop-body">Actively working through binary exploitation and reverse engineering fundamentals. Practising on TryHackMe and HackTheBox, using Ghidra for static analysis and pwndbg for dynamic debugging. Building toward the PNPT from scratch.</p>
+          <p class="loop-body">Actively working through binary exploitation and reverse engineering fundamentals. Practising on TryHackMe and HackTheBox, using Ghidra for static analysis and pwndbg for dynamic debugging. Starting from scratch with the eJPT certification.</p>
           <div class="loop-tags">
             <span class="stag sp">Ghidra</span>
             <span class="stag sp">pwndbg</span>
             <span class="stag sp">Binary Exploitation</span>
             <span class="stag sp">TryHackMe</span>
             <span class="stag sp">HackTheBox</span>
+            <span class="stag sp">eJPT</span>
           </div>
         </div>
 
@@ -1043,7 +1101,7 @@
   </section>
 
   <footer>
-    <p><span class="pk">SamRB-dev</span> · Sadim Rahman Badhan · <span class="gn">2025</span></p>
+    <p><span class="pk">SamRB-dev</span> · Sadim Rahman Badhan · <span class="gn">2026</span></p>
     <p style="margin-top:0.4rem;font-size:0.6rem;">Coded by <span class="pk">Claude</span> · Modified &amp; debugged by <span class="gn">Sadim Rahman Badhan</span></p>
   </footer>
 
